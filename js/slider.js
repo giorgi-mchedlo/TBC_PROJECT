@@ -1,25 +1,39 @@
-const slider = document.querySelector('.slider');
-const prevButton = document.getElementById('prev');
-const nextButton = document.getElementById('next');
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.arrow.prev');
+    const nextBtn = document.querySelector('.arrow.next');
+    
+    let currentIndex = 0;
 
-let currentSlide = 0;
-const slideWidth = slider.clientWidth;
+    function updateSlider() {
+        slider.style.transform = `translateX(${-currentIndex * 100}%)`;
+    }
 
-nextButton.addEventListener('click', () => {
-    if (currentSlide < 2) {
-        currentSlide++;
+    function showSlide(index) {
+        currentIndex = index;
         updateSlider();
     }
-});
 
-prevButton.addEventListener('click', () => {
-    if (currentSlide > 0) {
-        currentSlide--;
+    function showPrevSlide() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = slides.length - 1;
+        }
         updateSlider();
     }
+
+    function showNextSlide() {
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        updateSlider();
+    }
+
+    prevBtn.addEventListener('click', showPrevSlide);
+    nextBtn.addEventListener('click', showNextSlide);
 });
 
-function updateSlider() {
-    const translateValue = -currentSlide * slideWidth;
-    slider.style.transform = `translateX(${translateValue}px)`;
-}

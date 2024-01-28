@@ -150,8 +150,9 @@ section{
 }
 
 .home .home-bg .content {
+   text-transform:uppercase ;
    color: white;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a suitable font-family */
+   font-family: 'Arial', sans-serif; /* Choose a suitable font-family */
    font-size: 3rem;
    text-align: justify; /* Adjusted to center text */
    padding: 0 20px; /* Adjusted padding */
@@ -219,6 +220,7 @@ section{
    font-size: 2.5rem; /* Adjust font size as needed */
    color: rgb(63, 178, 255);
    text-decoration: none;
+   padding: 20px 0;
    transition: color 0.3s ease; /* Added transition effect */
 }
 
@@ -317,10 +319,27 @@ section{
 
 
 /* slider section */
+
+.carusel{
+   background-color: #333;
+
+}
+ h2{
+   color: white;
+   font-size: 2rem;
+   padding-left: 30px;
+}
+
 .slider-container {
-   max-width: 600px;
-   margin: 50px auto;
+
    position: relative;
+   width: 100%;
+   margin: 60px auto;
+   background-color: #333;
+}
+.slider-container  img{
+   width: 200px;
+   height: 200px;
 }
 
 .slider {
@@ -329,35 +348,34 @@ section{
 }
 
 .slide {
-   display: flex;
-   width: 100%;
-}
-
-.card {
-   flex: 1;
-   min-width: 100px;
-   border: 1px solid #ddd;
-   padding: 20px;
-   margin: 10px;
+   flex: 0 0 100%;
    box-sizing: border-box;
+   padding: 20px;
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   text-align: center;
+  /*  border: 1px solid #ccc; */
 }
 
-button {
+.arrow {
    position: absolute;
    top: 50%;
    transform: translateY(-50%);
-   background-color: #4CAF50;
-   color: white;
+   font-size: 24px;
+   background-color: transparent;
+   color: #fff;
    border: none;
    padding: 10px;
    cursor: pointer;
 }
 
-#prev {
+
+.arrow.prev {
    left: 10px;
 }
 
-#next {
+.arrow.next {
    right: 10px;
 }
 
@@ -416,20 +434,29 @@ button {
 
 .acordion .content-container .answer{
    padding-top: 15px;
-   font-size: 2rem;
+   font-size: 1.7rem;
    line-height: 1.5;
    width: 100%;
-
+   text-align: justify;
    height: 0px;
    overflow: hidden;
    transition:  .5s;
+   
+}
+.acordion .content-container .answer p .span{
+   font-weight: 900;
 }
 
 /* javascript styling link */
 
 .acordion .content-container.active .answer{
-   height: 150px;
+   height:fit-content;
+   border-bottom: 1px solid #666;
+   padding-bottom: 20px;
 
+}
+.acordion .content-container.active .question{
+   border:none ;
 }
 
 /* Responsive Styles */
