@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito:wght@200;300;400;500;600&display=swap');
 
 :root{
-   --main-color:#be9c79;
+   --main-color:#1d1d1d;
    --black:#333;
    --white:#fff;
-   --light-color:#666;
-   --border:.2rem solid var(--black);
+   --light-color:rgb(63, 178, 255);
    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
 }
 
@@ -19,7 +18,7 @@
 }
 
 *::selection{
-   background-color: var(--main-color);
+   background-color: var(--light-color);
    color:var(--white);
 }
 
@@ -33,7 +32,7 @@
 }
 
 ::-webkit-scrollbar-thumb{
-   background-color: rgb(63, 178, 255);
+   background-color: var(--light-color);
 }
 
 html{
@@ -80,7 +79,7 @@ section{
 .header{
    position: sticky;
    top:0; left: 0; right:0;
-   background-color: #242424;
+   background-color: var(--main-color);
    opacity: 0.9;
    box-shadow: var(--box-shadow);
    z-index: 1000;
@@ -106,7 +105,7 @@ section{
 }
 
 .header .flex .navbar a:hover{
-   color:rgb(63, 178, 255);
+   color:var(--light-color);
    transition: .3s;
 }
 
@@ -133,45 +132,29 @@ section{
    position: relative;
 }
 
-.home::after {
-   content: '';
-   position: absolute;
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   background: rgba(0, 0, 0, 0.5);
-}
+
 
 .home .home-bg {
    min-height: 40em;
    display: flex;
    align-items: center;
+   background: rgba(0, 0, 0, 0.5);
 }
 
 .home .home-bg .content {
    text-transform:uppercase ;
-   color: white;
-   font-family: 'Arial', sans-serif; /* Choose a suitable font-family */
+   color: var(--white);
+   font-family: 'Arial', sans-serif; 
    font-size: 3rem;
-   text-align: justify; /* Adjusted to center text */
-   padding: 0 20px; /* Adjusted padding */
-   z-index: 1;
+   text-align: justify;
+   padding: 0 20px; 
 }
 
-.home .home-bg .content h1 {
-   margin-bottom: 0.5rem;
-   font-size: 4rem; /* Adjusted font size */
-}
 
-.home .home-bg .content p {
-   font-size: 1.8rem; /* Adjusted font size */
-   margin-top: 1rem;
-   line-height: 1.5;
-   text-align: justify; /* Added text alignment */
-}
 
-/* Responsive Styles */
+
+
+/* Responsive Styles inline */
 @media screen and (max-width: 768px) {
    .home .home-bg .content {
       font-size: 2rem;
@@ -194,7 +177,7 @@ section{
 
 .Description {
    display: flex;
-   background-color: #333;
+   background-color: var(--black);
    min-height: 400px;
 }
 
@@ -205,7 +188,7 @@ section{
    display: flex;
    flex-direction: column;
    align-items: flex-start; /* Align items to the left */
-   color: whitesmoke;
+   color: var(--white);
    padding: 1rem;
 }
 
@@ -218,7 +201,7 @@ section{
 
 .Description .box-container a {
    font-size: 2.5rem; /* Adjust font size as needed */
-   color: rgb(63, 178, 255);
+   color: var(--light-color);
    text-decoration: none;
    padding: 20px 0;
    transition: color 0.3s ease; /* Added transition effect */
@@ -241,19 +224,19 @@ section{
    display: flex;
    align-items: center;
    justify-content: flex-start;
-   color: white;
-   background-color: #1d1d1d; /* Added background color for heading */
+   color: var(--white);
+   background-color: var(--main-color); /* Added background color for heading */
    border-radius: 5px;
 }
 
 .cards .heading h3 {
    font-size: 2.5rem; /* Slightly reduced font size */
-   color: white;
+   color: var(--white);
    margin: 0; /* Removed default margin */
 }
 
 .cards {
-   background-color: #1d1d1d;
+   background-color: var(--main-color);
 }
 
 .cards .box-container {
@@ -271,7 +254,7 @@ section{
    flex-direction: column;
    gap: 2rem;
    min-height: 400px;
-   background-color: #1d1d1d;
+   background-color: var(--main-color);
    border: 1px solid rgb(150, 153, 150);
    border-radius: 5px;
    transition: transform 0.3s ease-in-out;
@@ -285,7 +268,7 @@ section{
 }
 
 .cards .box-container .box .box-content {
-   color: white;
+   color: var(--white);
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
@@ -295,7 +278,7 @@ section{
 }
 
 .cards .box-container .box .box-content a {
-   color: rgb(63, 178, 255);
+   color: var(--light-color);
    text-decoration: none;
    transition: color 0.3s ease;
 }
@@ -321,11 +304,11 @@ section{
 /* slider section */
 
 .carusel{
-   background-color: #333;
+   background-color:var(--black);
 
 }
- h2{
-   color: white;
+.title-container h2{
+   color: var(--white);
    font-size: 2rem;
    padding-left: 30px;
 }
@@ -335,7 +318,7 @@ section{
    position: relative;
    width: 100%;
    margin: 100px auto;
-   background-color: #333;
+   background-color: var(--black);
 }
 .slider-container  img{
    width: 200px;
@@ -367,7 +350,7 @@ section{
    transform: translateY(-50%);
    font-size: 24px;
    background-color: transparent;
-   color: #fff;
+   color: var(--white);
    border: none;
    padding: 10px;
    cursor: pointer;
@@ -383,11 +366,6 @@ section{
 }
 
 
-@media (max-width: 768px) {
-   .carusel {
-      display: none; /* Show one slide at a time on small screens */
-   }
-}
 
 
 
@@ -395,7 +373,7 @@ section{
    display: flex;
    align-items: center;
    justify-content: center;
-   background-color: #1d1d1d;
+   background-color: var(--main-color);
    color: var(--white);
   /*  flex-wrap: wrap;
    gap:2rem; */
@@ -403,14 +381,15 @@ section{
 .acordion{
    width: 80%;
    padding: 30px;
-   background-color:#1d1d1d;
+   background-color:var(--main-color);
 }
 
 .acordion-title {
-   font-size: 2rem;
+   font-size: 1.5rem;
    display: flex;
    justify-content: space-between;
-   margin-bottom: 30px;
+   margin-bottom:  30px;
+   text-align: left;
 }
 
 .acordion-title h3 a {
@@ -469,17 +448,7 @@ section{
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
-   .acordion-title {
-      flex-direction: column;
-      align-items: flex-start;
-   }
 
-   .acordion-title h2,
-   .acordion-title h3 {
-      margin-bottom: 10px;
-   }
-}
 
 
 
@@ -491,7 +460,7 @@ section{
 /* footer section */
    
    .footer {
-      background-color: #333;
+      background-color: var(--black);
       color: white;
       text-align: center;
       padding: 20px;
@@ -515,7 +484,7 @@ section{
   }
 
   .social-icons a {
-      color: white;
+      color: var(--white);
       margin: 15px;
       text-decoration: none;
       font-size: 2rem;
@@ -576,9 +545,21 @@ section{
    .home-bg .home .content h3{
       font-size: 4rem;
    }
+     .acordion-title {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   .acordion-title h2,
+   .acordion-title h3 {
+      margin-bottom: 10px;
+   }
 
    .about .content h3{
       font-size: 3rem;
+   }
+    .carusel {
+      display: none;
    }
 
 }
