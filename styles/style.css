@@ -334,17 +334,20 @@ section{
 
    position: relative;
    width: 100%;
-   margin: 60px auto;
+   margin: 100px auto;
    background-color: #333;
 }
 .slider-container  img{
    width: 200px;
    height: 200px;
+   display: block;
+   margin:  0 auto;
 }
 
 .slider {
    display: flex;
    transition: transform 0.5s ease-in-out;
+  
 }
 
 .slide {
@@ -379,6 +382,12 @@ section{
    right: 10px;
 }
 
+
+@media (max-width: 768px) {
+   .carusel {
+      display: none; /* Show one slide at a time on small screens */
+   }
+}
 
 
 
